@@ -30,6 +30,17 @@ struct GameMode : public Mode {
 	//draw is called after update:
 	virtual void draw(glm::uvec2 const &drawable_size) override;
 
+	//------- variables -------
+	float jerryStep = 3.0f;
+
+	//CHANGED
+	//toms object transform array
+	//std::vector<Scene::Transform *> toms_transforms;
+	//toms newly dropped objects
+	//float currJerryX = 0.0f;
+	//float currJerryY = -3.0f;
+	std::vector<glm::vec2> newlyDropped;
+
 	//------- game state -------
 	Game state;
 

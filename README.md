@@ -1,11 +1,11 @@
 # Game Information
 (Note: fill in this portion with information about your game.)
 
-Title: (TODO: your game's title)
+Title: Cat and Mouse
 
-Author: (TODO: your name)
+Author: Suann Chi (suannc)
 
-Design Document: [TODO: name of design document](TODO: link to design document)
+Design Document: Cat and Mouse	URL: http://graphics.cs.cmu.edu/courses/15-466-f18/game2-designs/suannc/
 
 Screen Shot:
 
@@ -13,15 +13,20 @@ Screen Shot:
 
 How To Play:
 
-TODO: describe the controls and (if needed) goals/strategy.
+The game starts off with Tom having a random amount of objects to throw down (control by mouse click) at Jerry. Tom can choose where to drop the objects. 
+The object will disappear once it hits the floor or it hits Jerry. Jerry attempts to survive by going left or right (control by left and right arrow key) to 
+dodge the object coming down at him. Tom wins when he hits Jerry. Jerry wins if he manages to dodge all of Tom's objects.
 
 Changes From The Design Document:
 
-TODO: what did you need to add/remove/modify from the original design? Why?
+The orignal design has Tom throwing various shape of objects to Jerry, I simplified the thrown object to just one shape.
+I spent most of my time trying to figure out server client connections. 
 
 Good / Bad / Ugly Code:
 
-TODO: provide examples of code you wrote from this project that you think is good (elegant, simple, useful), bad (hack-y, brittle, unreadable), and ugly (particularly inelegant). Provide a sentence or two of justification for the examples.
+Good: Logical separation of what each client does and what the server does. Unfortunately the server was not able to actually receive data from client and I ran out of time to debug it. Finished writing the logic for win/loss conditions in game and in theory it should work if the server was able to receive info.
+Bad: I had the jerry client send to the server if jerry was still in the game, someone could easily change the source code to cheat. 
+
 
 # Using This Base Code
 

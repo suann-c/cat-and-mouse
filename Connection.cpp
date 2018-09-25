@@ -102,6 +102,7 @@ void poll_connections(
 			c.close();
 			if (on_event) on_event(&c, Connection::OnClose);
 		} else { //ret > 0
+			//std::cout<< "receive buffer filled" <<std::endl;
 			c.recv_buffer.insert(c.recv_buffer.end(), buffer, buffer + ret);
 			if (on_event) on_event(&c, Connection::OnRecv);
 		}

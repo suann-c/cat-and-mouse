@@ -80,6 +80,9 @@ int main(int argc, char **argv) {
 
 //Thin wrapper around a (polling-based) TCP socket connection:
 struct Connection {
+	//CHANGED
+	std::string type = "notype";
+
 	//Helper that will append any type to the send buffer:
 	template< typename T >
 	void send(T const &t) {

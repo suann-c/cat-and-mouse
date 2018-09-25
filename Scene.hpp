@@ -58,6 +58,7 @@ struct Scene {
 		Transform *alloc_next = nullptr;
 	};
 
+	//TODO: ADD VISIBILITY FIELD
 	//"Object"s contain information needed to render meshes:
 	struct Object {
 		Transform *transform; //objects must be attached to transforms.

@@ -1,5 +1,12 @@
 #include "Game.hpp"
 
+//TODO: ADD TOMS OBJECTS
+void Game::update(float time) {
+	//update tom's thrown objects positions
+}
+
+
+/*
 void Game::update(float time) {
 	ball += ball_velocity * time;
 	if (ball.x >= 0.5f * FrameWidth - BallRadius) {
@@ -37,3 +44,4 @@ void Game::update(float time) {
 	do_edge(glm::vec2(paddle.x + 0.5f * PaddleWidth, paddle.y), glm::vec2(paddle.x - 0.5f * PaddleWidth, paddle.y));
 
 }
+*/
